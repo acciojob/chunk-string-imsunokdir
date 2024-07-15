@@ -1,6 +1,6 @@
 function stringChop(str, size) {
   // your code here
-	if(str.length == ""){
+	if(str.length<=0){
 		return []
 	}
 	let newArr = []
@@ -13,4 +13,4 @@ function stringChop(str, size) {
 // Do not change the code below
 const str = prompt("Enter String.");
 const size = prompt("Enter Chunk Size.");
-alert(JSON.stringify(stringChop(str, Number(size))));
+alert(stringChop(str, Number(size)));
