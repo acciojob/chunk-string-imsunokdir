@@ -1,13 +1,14 @@
 function stringChop(str, size) {
-  // your code here
-	if(str.length<=0){
-		return []
-	}
-	let newArr = []
-	for(let i=0;i<str.length;i+=size){
-		newArr.push(str.slice(i,i+size))
-	}
-	return newArr
+  // Check for invalid inputs
+  if (!str || typeof str !== 'string' || str.length === 0 || isNaN(size) || size <= 0) {
+    return [];
+  }
+
+  let newArr = [];
+  for (let i = 0; i < str.length; i += size) {
+    newArr.push(str.slice(i, i + size));
+  }
+  return newArr;
 }
 
 // Do not change the code below
